@@ -1,0 +1,13 @@
+docker run --name my-redis -p 5002:6379 -d redis
+docker ps -a
+
+docker exec -it my-redis sh
+redis-cli
+
+ping
+
+select 0
+dbsize
+scan 0  -->give me the items(keys) in the list
+
+hgetall RedisDemo_WeatherForecast_20221014_1251
